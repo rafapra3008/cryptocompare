@@ -4,48 +4,6 @@
 
 ---
 
-## 🎯 TOMORROW (22 Nov - DAY 1)
-
-### Model C: CryptoCompare (Priority 1)
-- [ ] ☁️ Buy domain: cryptoexchange-compare.com (Cloudflare - €12)
-- [ ] 🔗 Affiliate signups:
-  - [ ] Binance Partner Program
-  - [ ] Coinbase Affiliate  
-  - [ ] Kraken Affiliate Network
-- [ ] 💻 Hugo site setup:
-  ```bash
-  brew install hugo
-  mkdir -p model_c_comparison/site
-  cd model_c_comparison/site
-  hugo new site . --force
-  ```
-- [ ] 📊 Database: Insert 10 exchanges (Binance, Coinbase, Kraken, Crypto.com, etc.)
-
-**Time Estimate:** 4-5 hours  
-**Success Criteria:** Domain live, affiliate IDs obtained, Hugo running locally
-
----
-
-### Shared Infrastructure (Priority 2)
-- [ ] 🗄️ PostgreSQL setup:
-  - Use existing VM `cervello-contabilita` OR
-  - Setup local PostgreSQL for development
-- [ ] 📁 Run `shared/schema.sql` to create all tables
-- [ ] 🔑 Create `.env` file from `.env.example`
-- [ ] 🧪 Test database connection
-
-**Time Estimate:** 2 hours  
-**Success Criteria:** Database tables created, can connect from Python
-
----
-
-### Model A: PriceIntel (Parallel Work)
-- [ ] 📝 Keyword research: Find 50 target keywords
-  - Use Google Keyword Planner (free)
-  - Or Ahrefs free trial
-  - Format: "BTC USD price", "ETH EUR live price", etc.
-- [ ] 📄 Save keywords to `model_a_seo/keywords.csv`
-
 **Time Estimate:** 1 hour  
 **Success Criteria:** 50 keywords with search volume data
 
