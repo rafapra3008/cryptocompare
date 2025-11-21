@@ -1,0 +1,37 @@
+# Requirements for all projects
+
+# Core
+python-dotenv==1.0.0
+psycopg2-binary==2.9.9
+requests==2.31.0
+sqlalchemy==2.0.23
+
+# APIs & Scraping
+beautifulsoup4==4.12.2
+feedparser==6.0.10
+aiohttp==3.9.1
+
+# AI & ML (for content generation & sentiment)
+openai==1.3.0  # Or use OpenRouter SDK
+scikit-learn==1.3.2
+pandas==2.1.3
+numpy==1.26.2
+
+# Web Framework (for Model B API & Model D SaaS)
+fastapi==0.104.1
+uvicorn==0.24.0
+stripe==7.4.0  # For Model D payments
+
+# Static Site Generation (for Model A & C)
+# (Hugo is separate binary, installed via brew/apt)
+
+# Automation & Cron
+schedule==1.2.0
+python-crontab==3.0.0
+
+# Analytics
+plausible-analytics==0.1.0  # Or custom implementation
+
+# Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
