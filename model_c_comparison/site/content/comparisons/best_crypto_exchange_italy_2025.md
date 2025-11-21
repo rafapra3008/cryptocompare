@@ -1,7 +1,7 @@
 ---
 title: "Best Crypto Exchange Italy 2025 - Complete Guide"
 description: "Compare Binance, Coinbase, Kraken in 2025. Fees, features, security. Updated Nov 2025."
-date: 2025-11-21T21:49:37.300373
+date: 2025-11-21T21:49:00+01:00
 keywords: ["best crypto exchange italy 2025"]
 draft: false
 ---
