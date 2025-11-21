@@ -1,0 +1,27 @@
+# Install these cron jobs on your server or local machine
+
+# Edit crontab:
+# crontab -e
+
+# Add these lines:
+
+# Fetch prices every hour
+0 * * * * /Users/rafapra/.gemini/antigravity/scratch/revenue_portfolio/scripts/fetch_prices.py >> /var/log/revenue_cron.log 2>&1
+
+# Daily jobs at 2:00 AM
+0 2 * * * /Users/rafapra/.gemini/antigravity/scratch/revenue_portfolio/scripts/daily_jobs.sh >> /var/log/revenue_daily.log 2>&1
+
+# Health check every 6 hours
+0 */6 * * * /Users/rafapra/.gemini/antigravity/scratch/revenue_portfolio/scripts/health_check.py >> /var/log/revenue_health.log 2>&1
+
+# Weekly analytics report (Sundays at 9am)
+0 9 * * 0 /Users/rafapra/.gemini/antigravity/scratch/revenue_portfolio/scripts/weekly_report.py >> /var/log/revenue_weekly.log 2>&1
+
+# Backup database daily at 4am
+0 4 * * * pg_dump revenue_portfolio > /backups/revenue_portfolio_$(date +\%Y\%m\%d).sql
+
+# Clean old logs (keep last 30 days)
+0 5 * * * find /var/log/revenue_*.log -mtime +30 -delete
+
+# Monitor disk space (daily at 6am)
+0 6 * * * df -h | grep -E '9[0-9]%|100%' && echo "⚠️ Disk space critical!" | mail -s "Disk Alert" $OWNER_EMAIL
