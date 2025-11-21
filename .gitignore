@@ -1,0 +1,48 @@
+# Security
+.env
+*.key
+*.pem
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv
+
+# Database
+*.db
+*.sqlite
+*.sql.backup
+
+# Hugo
+public/
+resources/
+.hugo_build.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Node (if using for Model D SaaS)
+node_modules/
+package-lock.json

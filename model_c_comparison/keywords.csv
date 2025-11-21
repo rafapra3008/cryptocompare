@@ -1,0 +1,29 @@
+# Model C: Top 20 Comparison Keywords
+
+# Priority 1: High Intent (buy/signup)
+best crypto exchange italy 2025,["Binance","Coinbase","Kraken"]
+best crypto exchange for beginners,["Coinbase","Crypto.com","Binance"]
+cheapest crypto exchange fees,["Binance","Kraken","Bitpanda"]
+best exchange for bitcoin,["Binance","Coinbase","Kraken"]
+best exchange for altcoins,["Binance","KuCoin","Crypto.com"]
+
+# Priority 2: Comparison (vs)
+binance vs coinbase,["Binance","Coinbase"]
+binance vs kraken,["Binance","Kraken"]
+coinbase vs coinbase pro,["Coinbase","Coinbase Pro"]
+crypto.com vs binance,["Crypto.com","Binance"]
+kraken vs coinbase,["Kraken","Coinbase"]
+
+# Priority 3: Specific Use Cases
+best crypto exchange for day trading,["Binance","Kraken","Bitfinex"]
+best crypto exchange for staking,["Binance","Kraken","Coinbase"]
+best crypto exchange with low fees,["Binance","Kraken","Bitstamp"]
+most secure crypto exchange,["Kraken","Coinbase","Gemini"]
+best crypto exchange for privacy,["Kraken","Bisq","LocalCryptos"]
+
+# Priority 4: Geo-Specific
+best crypto exchange europe,["Binance","Kraken","Bitstamp"]
+best crypto exchange eu regulated,["Coinbase","Kraken","Bitpanda"]
+crypto exchange accepting euro,["Binance","Kraken","Bitstamp"]
+miglior exchange crypto italia,["Binance","Coinbase","Kraken"]
+crypto exchange with sepa,["Binance","Kraken","Bitstamp"]
