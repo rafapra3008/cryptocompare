@@ -1,0 +1,23 @@
+baseURL = "https://cryptoexchange-compare.com/"
+languageCode = "it"
+title = "CryptoCompare - Best Crypto Exchange Italy 2025"
+
+[params]
+  description = "Compare crypto exchanges for Italy: Binance, Coinbase, Kraken. Fees, features, security."
+  author = "CryptoCompare Team"
+  
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  
+  [[menu.main]]
+    name = "Comparisons"
+    url = "/comparisons/"
+    weight = 2
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow HTML in markdown
