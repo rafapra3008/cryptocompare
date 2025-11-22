@@ -1,0 +1,9 @@
+{
+    "buildCommand": "cd model_c_comparison/site && hugo -D",
+    "outputDirectory": "model_c_comparison/site/public",
+    "framework": "hugo",
+    "installCommand": "echo 'Using Hugo from Vercel'",
+    "env": {
+        "HUGO_VERSION": "0.152.2"
+    }
+}
