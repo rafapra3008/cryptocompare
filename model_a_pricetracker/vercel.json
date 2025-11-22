@@ -1,5 +1,5 @@
 {
-    "buildCommand": "cd site && hugo --minify",
+    "buildCommand": "cd site && hugo version && hugo --minify",
     "outputDirectory": "site/public",
     "framework": null
 }
