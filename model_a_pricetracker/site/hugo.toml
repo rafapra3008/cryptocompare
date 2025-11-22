@@ -1,0 +1,30 @@
+baseURL = 'https://www.cryptopricelive.net/'
+languageCode = 'en-us'
+title = 'Crypto Price Live - Real-time Cryptocurrency Prices'
+theme = ''
+
+[params]
+  description = 'Live cryptocurrency prices, charts, and historical data for Bitcoin, Ethereum, and 1000+ coins'
+  # Green theme colors
+  primary_color = '#10b981'
+  secondary_color = '#059669'
+
+[[menus.main]]
+  name = 'Home'
+  url = '/'
+  weight = 1
+
+[[menus.main]]
+  name = 'Bitcoin'
+  url = '/prices/bitcoin-usd/'
+  weight = 2
+
+[[menus.main]]
+  name = 'Ethereum'
+  url = '/prices/ethereum-usd/'
+  weight = 3
+
+[[menus.main]]
+  name = 'Compare Exchanges'
+  url = 'https://www.cryptoverso2025.com/'
+  weight = 4

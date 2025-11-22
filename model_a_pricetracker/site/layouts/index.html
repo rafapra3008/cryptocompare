@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="card" style="text-align: center; padding: 4rem 2rem;">
+    <h1>Real-Time Crypto Prices</h1>
+    <p class="lead">Track live prices for Bitcoin, Ethereum, and top cryptocurrencies.</p>
+
+    <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+        <!-- Featured Coins -->
+        <a href="/prices/bitcoin-usd/" style="text-decoration: none; color: inherit;">
+            <div class="price-display" style="margin: 0; padding: 1.5rem;">
+                <h3>Bitcoin (BTC)</h3>
+                <div class="live-price" style="font-size: 2rem;">$98,450</div>
+                <span style="color: #10b981;">▲ 2.4%</span>
+            </div>
+        </a>
+
+        <a href="/prices/ethereum-usd/" style="text-decoration: none; color: inherit;">
+            <div class="price-display" style="margin: 0; padding: 1.5rem;">
+                <h3>Ethereum (ETH)</h3>
+                <div class="live-price" style="font-size: 2rem;">$3,450</div>
+                <span style="color: #ef4444;">▼ 0.5%</span>
+            </div>
+        </a>
+
+        <a href="/prices/solana-usd/" style="text-decoration: none; color: inherit;">
+            <div class="price-display" style="margin: 0; padding: 1.5rem;">
+                <h3>Solana (SOL)</h3>
+                <div class="live-price" style="font-size: 2rem;">$145</div>
+                <span style="color: #10b981;">▲ 5.1%</span>
+            </div>
+        </a>
+    </div>
+
+    <div style="margin-top: 4rem;">
+        <h2>Compare & Save</h2>
+        <p>Looking for the best place to buy?</p>
+        <a href="https://www.cryptoverso2025.com/comparisons/best-crypto-exchange-italy-2025/" class="btn">
+            View Exchange Comparisons →
+        </a>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,54 @@
+{{ define "main" }}
+<article class="card">
+    <div style="text-align: center; margin-bottom: 2rem;">
+        <span
+            style="background: #d1fae5; color: #059669; padding: 0.25rem 0.75rem; border-radius: 99px; font-size: 0.875rem; font-weight: 600;">LIVE
+            DATA</span>
+        <h1 style="margin-top: 1rem;">{{ .Title }}</h1>
+    </div>
+
+    <div class="price-display">
+        <div class="live-price" id="price-value">Loading...</div>
+        <div class="price-meta">
+            Updated: <span id="last-update">Just now</span>
+        </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+        {{ .Content }}
+    </div>
+
+    <div style="background: #f8fafc; padding: 2rem; border-radius: 8px; margin-top: 3rem; border: 1px solid #e2e8f0;">
+        <h3 style="margin-top: 0;">⚡️ Ready to Buy?</h3>
+        <p>Don't overpay on fees. We've compared the top exchanges.</p>
+        <a href="https://www.cryptoverso2025.com/comparisons/cheapest-crypto-exchange-fees/" class="btn"
+            target="_blank">
+            Find Cheapest Exchange →
+        </a>
+    </div>
+</article>
+
+<script>
+    // Simple simulation for MVP - Will replace with real API fetch
+    document.addEventListener('DOMContentLoaded', function () {
+        const priceElement = document.getElementById('price-value');
+        const updateElement = document.getElementById('last-update');
+
+        // Simulate live price update
+        function updatePrice() {
+            // This would fetch from our API in production
+            const now = new Date();
+            updateElement.textContent = now.toLocaleTimeString();
+
+            // Visual flash effect
+            priceElement.style.color = '#059669';
+            setTimeout(() => {
+                priceElement.style.color = '#059669'; // Keep green
+            }, 500);
+        }
+
+        // Initial load
+        setTimeout(updatePrice, 1000);
+    });
+</script>
+{{ end }}
