@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cryptoexchange-compare.com/sitemap.xml
+
+# Disallow admin/system paths
+Disallow: /admin/
+Disallow: /.git/
+Disallow: /.env
+
+# Allow all comparison pages
+Allow: /comparisons/
+
+# Crawl delay (be nice to search engines)
+Crawl-delay: 1
