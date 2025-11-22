@@ -241,3 +241,8 @@ MIT License - See [LICENSE](LICENSE) file
 **Built with 💙 by** [rafapra3008](https://github.com/rafapra3008)
 
 **Making the world better, one comparison at a time!** 🌍✨
+
+## Deployment Status
+- Model C: Live ✅
+- Model A: Deploying... 🚀
+
