@@ -1,5 +1,5 @@
 {
-    "buildCommand": "cd model_c_comparison/site && hugo -D",
+    "buildCommand": "cd model_c_comparison/site && hugo --minify",
     "outputDirectory": "model_c_comparison/site/public",
     "framework": "hugo",
     "installCommand": "echo 'Using Hugo from Vercel'",
