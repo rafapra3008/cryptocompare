@@ -1,7 +1,7 @@
 baseURL = 'https://www.cryptopricelive.net/'
 languageCode = 'en-us'
 title = 'Crypto Price Live - Real-time Cryptocurrency Prices'
-theme = ''
+
 
 [params]
   description = 'Live cryptocurrency prices, charts, and historical data for Bitcoin, Ethereum, and 1000+ coins'
