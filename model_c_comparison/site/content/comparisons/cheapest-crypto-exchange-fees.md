@@ -32,22 +32,22 @@ draft: false
                     <td><strong>🥇 Binance</strong></td>
                     <td>0.1%</td>
                     <td>350+</td>
-                    <td>⭐ 4.5/5</td>
-                    <td><a href="#binance" class="btn">Sign Up →</a></td>
+                    <td>⭐ 4.8/5</td>
+                    <td><a href="https://www.binance.com/activity/referral-entry/CPA?ref=CPA_004NMYS76M" class="btn btn-primary" target="_blank" rel="noopener">Get €100 Bonus →</a></td>
                 </tr>
                 <tr>
                     <td><strong>🥈 Kraken</strong></td>
                     <td>0.16%</td>
-                    <td>150+</td>
-                    <td>⭐ 4.4/5</td>
-                    <td><a href="#kraken" class="btn">Sign Up →</a></td>
+                    <td>200+</td>
+                    <td>⭐ 4.6/5</td>
+                    <td><a href="https://www.kraken.com/sign-up?ref=dd549f99" class="btn btn-primary" target="_blank" rel="noopener">Sign Up →</a></td>
                 </tr>
                 <tr>
-                    <td><strong>🥉 Bitstamp</strong></td>
-                    <td>0.5%</td>
-                    <td>80+</td>
-                    <td>⭐ 4.0/5</td>
-                    <td><a href="#bitstamp" class="btn">Sign Up →</a></td>
+                    <td><strong>🥉 Coinbase</strong></td>
+                    <td>1.49%</td>
+                    <td>250+</td>
+                    <td>⭐ 4.3/5</td>
+                    <td><a href="https://www.coinbase.com/" class="btn btn-secondary" target="_blank" rel="noopener">Get Started →</a></td>
                 </tr>
             </tbody>
         </table>
