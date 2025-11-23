@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .email-popup {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            z-index: 9999;
+            animation: slideUp 0.4s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .email-popup.active {
+            display: block;
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .popup-close:hover {
+            color: #333;
+        }
+
+        .popup-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1f2937;
+        }
+
+        .popup-subtitle {
+            font-size: 0.95rem;
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .email-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .email-input {
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+
+        .email-input:focus {
+            outline: none;
+            border-color: #2563eb;
+        }
+
+        .email-submit {
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .email-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .popup-benefits {
+            font-size: 0.85rem;
+            color: #9ca3af;
+            margin-top: 12px;
+            text-align: center;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .email-popup {
+                bottom: 10px;
+                right: 10px;
+                left: 10px;
+                max-width: none;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Email Popup -->
+    <div id="emailPopup" class="email-popup">
+        <button class="popup-close" onclick="closePopup()">×</button>
+
+        <h3 class="popup-title">💰 Save €100s on Crypto Fees</h3>
+        <p class="popup-subtitle">Get our free exchange comparison cheat sheet + weekly deals</p>
+
+        <form id="emailForm" class="email-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <input type="email" name="email" class="email-input" placeholder="your@email.com" required>
+            <button type="submit" class="email-submit">
+                Get Free Guide →
+            </button>
+        </form>
+
+        <p class="popup-benefits">
+            ✓ No spam, ever · Unsubscribe anytime
+        </p>
+    </div>
+
+    <script>
+        // Show popup after 30 seconds
+        setTimeout(function () {
+            // Check if user hasn't closed it before (localStorage)
+            if (!localStorage.getItem('popupClosed')) {
+                document.getElementById('emailPopup').classList.add('active');
+            }
+        }, 30000); // 30 seconds
+
+        // Close popup function
+        function closePopup() {
+            document.getElementById('emailPopup').classList.remove('active');
+            localStorage.setItem('popupClosed', 'true');
+        }
+
+        // Handle form submission
+        document.getElementById('emailForm').addEventListener('submit', function (e) {
+            // Formspree will handle it
+            setTimeout(function () {
+                closePopup();
+                alert('✅ Thanks! Check your inbox for the free guide!');
+            }, 500);
+        });
+
+        // Show popup on exit intent (optional - desktop only)
+        document.addEventListener('mouseleave', function (e) {
+            if (e.clientY < 0 && !localStorage.getItem('popupClosed')) {
+                document.getElementById('emailPopup').classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
