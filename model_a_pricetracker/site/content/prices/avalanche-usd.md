@@ -1,7 +1,7 @@
 ---
 title: "Avalanche Price USD - Live Chart & Price Today"
 description: "Real-time AVAX/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.959989
+date: 2025-11-23T12:39:35.815650
 keywords: ["AVAX price", "AVAX USD", "AVAX live price", "buy AVAX"]
 draft: false
 ---

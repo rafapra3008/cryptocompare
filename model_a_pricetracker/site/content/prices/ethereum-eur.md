@@ -1,7 +1,7 @@
 ---
 title: "Ethereum Price EUR - Live Chart & Price Today"
 description: "Real-time ETH/EUR price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.959200
+date: 2025-11-23T12:39:35.814703
 keywords: ["ETH price", "ETH EUR", "ETH live price", "buy ETH"]
 draft: false
 ---

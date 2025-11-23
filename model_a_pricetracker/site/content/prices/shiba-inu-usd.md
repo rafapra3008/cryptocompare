@@ -1,7 +1,7 @@
 ---
 title: "Shiba Inu Price USD - Live Chart & Price Today"
 description: "Real-time SHIB/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.960637
+date: 2025-11-23T12:39:35.816197
 keywords: ["SHIB price", "SHIB USD", "SHIB live price", "buy SHIB"]
 draft: false
 ---

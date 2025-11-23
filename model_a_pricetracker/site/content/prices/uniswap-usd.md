@@ -1,7 +1,7 @@
 ---
 title: "Uniswap Price USD - Live Chart & Price Today"
 description: "Real-time UNI/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.960870
+date: 2025-11-23T12:39:35.816447
 keywords: ["UNI price", "UNI USD", "UNI live price", "buy UNI"]
 draft: false
 ---

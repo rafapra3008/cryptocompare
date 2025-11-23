@@ -1,7 +1,7 @@
 ---
 title: "Ethereum Price GBP - Live Chart & Price Today"
 description: "Real-time ETH/GBP price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.959439
+date: 2025-11-23T12:39:35.815103
 keywords: ["ETH price", "ETH GBP", "ETH live price", "buy ETH"]
 draft: false
 ---

@@ -2,9 +2,10 @@
 import os
 from datetime import datetime
 
-# Top 20 price pages configuration
+# Top 30 price pages configuration
 # Slug, Title, Coin Symbol, Currency
 pages = [
+    # Original 20 (kept)
     ("bitcoin-usd", "Bitcoin Price USD", "BTC", "USD"),
     ("bitcoin-eur", "Bitcoin Price EUR", "BTC", "EUR"),
     ("ethereum-usd", "Ethereum Price USD", "ETH", "USD"),
@@ -25,6 +26,18 @@ pages = [
     ("bitcoin-cash-usd", "Bitcoin Cash Price USD", "BCH", "USD"),
     ("uniswap-usd", "Uniswap Price USD", "UNI", "USD"),
     ("stellar-usd", "Stellar Price USD", "XLM", "USD"),
+    
+    # NEW: +10 pages (Top altcoins + more pairs)
+    ("toncoin-usd", "Toncoin Price USD", "TON", "USD"),
+    ("tron-usd", "Tron Price USD", "TRX", "USD"),
+    ("dai-usd", "Dai Price USD", "DAI", "USD"),
+    ("cosmos-usd", "Cosmos Price USD", "ATOM", "USD"),
+    ("solana-eur", "Solana Price EUR", "SOL", "EUR"),
+    ("cardano-eur", "Cardano Price EUR", "ADA", "EUR"),
+    ("ripple-eur", "XRP Price EUR", "XRP", "EUR"),
+    ("polkadot-eur", "Polkadot Price EUR", "DOT", "EUR"),
+    ("binancecoin-eur", "BNB Price EUR", "BNB", "EUR"),
+    ("chainlink-eur", "Chainlink Price EUR", "LINK", "EUR"),
 ]
 
 # Ensure output directory exists

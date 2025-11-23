@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Price GBP - Live Chart & Price Today"
 description: "Real-time BTC/GBP price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.959312
+date: 2025-11-23T12:39:35.814896
 keywords: ["BTC price", "BTC GBP", "BTC live price", "buy BTC"]
 draft: false
 ---

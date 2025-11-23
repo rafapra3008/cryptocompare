@@ -1,7 +1,7 @@
 ---
 title: "Dogecoin Price USD - Live Chart & Price Today"
 description: "Real-time DOGE/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.960103
+date: 2025-11-23T12:39:35.815726
 keywords: ["DOGE price", "DOGE USD", "DOGE live price", "buy DOGE"]
 draft: false
 ---

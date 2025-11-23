@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Price EUR - Live Chart & Price Today"
 description: "Real-time BTC/EUR price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.958961
+date: 2025-11-23T12:39:35.814217
 keywords: ["BTC price", "BTC EUR", "BTC live price", "buy BTC"]
 draft: false
 ---

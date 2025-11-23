@@ -1,7 +1,7 @@
 ---
 title: "Polygon Price USD - Live Chart & Price Today"
 description: "Real-time MATIC/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.960317
+date: 2025-11-23T12:39:35.815979
 keywords: ["MATIC price", "MATIC USD", "MATIC live price", "buy MATIC"]
 draft: false
 ---

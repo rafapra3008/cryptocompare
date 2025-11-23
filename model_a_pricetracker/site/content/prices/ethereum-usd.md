@@ -1,7 +1,7 @@
 ---
 title: "Ethereum Price USD - Live Chart & Price Today"
 description: "Real-time ETH/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.959078
+date: 2025-11-23T12:39:35.814406
 keywords: ["ETH price", "ETH USD", "ETH live price", "buy ETH"]
 draft: false
 ---

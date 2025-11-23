@@ -1,7 +1,7 @@
 ---
 title: "Bitcoin Price USD - Live Chart & Price Today"
 description: "Real-time BTC/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.958763
+date: 2025-11-23T12:39:35.813659
 keywords: ["BTC price", "BTC USD", "BTC live price", "buy BTC"]
 draft: false
 ---

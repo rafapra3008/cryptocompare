@@ -1,7 +1,7 @@
 ---
 title: "Litecoin Price USD - Live Chart & Price Today"
 description: "Real-time LTC/USD price, 24h chart, historical data and market analysis. Updated every minute."
-date: 2025-11-22T17:41:07.960535
+date: 2025-11-23T12:39:35.816125
 keywords: ["LTC price", "LTC USD", "LTC live price", "buy LTC"]
 draft: false
 ---
