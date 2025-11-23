@@ -28,3 +28,8 @@ title = 'Crypto Price Live - Real-time Cryptocurrency Prices'
   name = 'Compare Exchanges'
   url = 'https://www.cryptoverso2025.com/'
   weight = 4
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
