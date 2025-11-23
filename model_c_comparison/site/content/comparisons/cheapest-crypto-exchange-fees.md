@@ -1,5 +1,5 @@
 ---
-title: "Cheapest Crypto Exchange Fees - Complete Guide"
+title: "Cheapest Crypto Exchange Fees 2025 | Save €1,200/Year"
 description: "Compare Binance, Kraken, Bitstamp in 2025. Fees, features, security. Updated Nov 2025."
 date: 2025-11-21T21:49:37.301095
 keywords: ["cheapest crypto exchange fees"]

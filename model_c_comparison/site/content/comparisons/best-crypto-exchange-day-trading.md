@@ -1,5 +1,5 @@
 ---
-title: "Best Crypto Exchange for Day Trading 2025"
+title: "Best Crypto Exchange for Day Trading 2025 | 0.1% Fees"
 description: "Compare the best crypto exchanges for day trading: low fees, high liquidity, advanced charts. Binance, Kraken, Coinbase reviewed."
 date: 2025-11-23T12:20:00Z
 keywords: ["day trading crypto", "best exchange for day trading", "crypto trading platform"]
