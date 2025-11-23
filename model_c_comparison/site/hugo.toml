@@ -2,11 +2,6 @@ baseURL = 'https://www.cryptoverso2025.com/'
 languageCode = 'en-us'
 title = 'CryptoCompare - Best Crypto Exchange Italy 2025'
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
 [params]
   description = "Compare crypto exchanges for Italy: Binance, Coinbase, Kraken. Fees, features, security."
   author = "CryptoCompare Team"
@@ -25,4 +20,4 @@ title = 'CryptoCompare - Best Crypto Exchange Italy 2025'
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      unsafe = true  # Allow HTML in markdown
+      unsafe = true
