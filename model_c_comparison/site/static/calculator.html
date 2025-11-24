@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Fee Calculator - How Much Are You Losing?</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .calculator-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 800px;
+            width: 100%;
+            padding: 40px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            color: #1f2937;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .input-section {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        input[type="number"], select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+        }
+        
+        input[type="number"]:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .results {
+            display: none;
+            margin-top: 30px;
+        }
+        
+        .results.show {
+            display: block;
+            animation: slideIn 0.4s ease-out;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .result-card {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .result-card.best {
+            background: linear-gradient(135deg, #d1fae522 0%, #a7f3d022 100%);
+            border-left-color: #10b981;
+        }
+        
+        .result-card.worst {
+            background: linear-gradient(135deg, #fee2e222 0%, #fecaca22 100%);
+            border-left-color: #ef4444;
+        }
+        
+        .exchange-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        .fee-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .fee-item {
+            font-size: 0.9rem;
+            color: #6b7280;
+        }
+        
+        .fee-value {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .savings-highlight {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .savings-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+        
+        .cta-section {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 640px) {
+            .calculator-container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .savings-amount {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>💰 Crypto Fee Calculator</h1>
+        <p class="subtitle">Calculate exactly how much you're losing to exchange fees</p>
+        
+        <div class="input-section">
+            <div class="input-group">
+                <label for="volume">Monthly Trading Volume (€)</label>
+                <input type="number" id="volume" placeholder="e.g., 10000" value="10000" min="100" step="100">
+            </div>
+            
+            <div class="input-group">
+                <label for="frequency">Trading Frequency</label>
+                <select id="frequency">
+                    <option value="1">Once per month (HODL)</option>
+                    <option value="4">Weekly trader</option>
+                    <option value="20" selected>Day trader (20 trades/month)</option>
+                    <option value="60">Active day trader (60 trades/month)</option>
+                </select>
+            </div>
+            
+            <button class="calculate-btn" onclick="calculateFees()">Calculate My Savings →</button>
+        </div>
+        
+        <div class="results" id="results">
+            <div id="resultsContent"></div>
+        </div>
+    </div>
+    
+    <script>
+        function calculateFees() {
+            const volume = parseFloat(document.getElementById('volume').value) || 0;
+            const frequency = parseFloat(document.getElementById('frequency').value) || 1;
+            
+            if (volume < 100) {
+                alert('Please enter a volume of at least €100');
+                return;
+            }
+            
+            // Fee structures (trading fee % + avg withdrawal fee)
+            const exchanges = [
+                { name: 'Binance', fee: 0.001, withdrawal: 3, color: '#F0B90B' },
+                { name: 'Kraken', fee: 0.0016, withdrawal: 2, color: '#5741D9' },
+                { name: 'Coinbase', fee: 0.0149, withdrawal: 0, spread: 0.005, color: '#0052FF' }
+            ];
+            
+            // Calculate costs for each exchange
+            const results = exchanges.map(ex => {
+                const tradingCost = volume * ex.fee * frequency;
+                const withdrawalCost = ex.withdrawal * frequency;
+                const spreadCost = ex.spread ? volume * ex.spread * frequency : 0;
+                const totalMonth = tradingCost + withdrawalCost + spreadCost;
+                const totalYear = totalMonth * 12;
+                
+                return {
+                    ...ex,
+                    tradingCost,
+                    withdrawalCost,
+                    spreadCost,
+                    totalMonth,
+                    totalYear
+                };
+            });
+            
+            // Sort by total cost
+            results.sort((a, b) => a.totalMonth - b.totalMonth);
+            
+            // Calculate savings
+            const cheapest = results[0];
+            const mostExpensive = results[results.length - 1];
+            const savings = mostExpensive.totalYear - cheapest.totalYear;
+            
+            // Display results
+            let html = '';
+            
+            results.forEach((ex, index) => {
+                const isBest = index === 0;
+                const isWorst = index === results.length - 1;
+                
+                html += `
+                    <div class="result-card ${isBest ? 'best' : ''} ${isWorst ? 'worst' : ''}">
+                        <div class="exchange-name">
+                            ${isBest ? '🥇 ' : isWorst ? '🥉 ' : '🥈 '} ${ex.name}
+                        </div>
+                        <div class="fee-breakdown">
+                            <div class="fee-item">
+                                Trading Fees: <span class="fee-value">€${ex.tradingCost.toFixed(2)}/mo</span>
+                            </div>
+                            <div class="fee-item">
+                                Withdrawal: <span class="fee-value">€${ex.withdrawalCost.toFixed(2)}/mo</span>
+                            </div>
+                            ${ex.spreadCost > 0 ? `
+                                <div class="fee-item">
+                                    Spread Cost: <span class="fee-value">€${ex.spreadCost.toFixed(2)}/mo</span>
+                                </div>
+                            ` : ''}
+                            <div class="fee-item">
+                                <strong>Total/Month: <span class="fee-value">€${ex.totalMonth.toFixed(2)}</span></strong>
+                            </div>
+                            <div class="fee-item">
+                                Total/Year: <span class="fee-value">€${ex.totalYear.toFixed(2)}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            html += `
+                <div class="savings-highlight">
+                    <div style="font-size: 1.1rem; opacity: 0.9;">Annual Savings with ${cheapest.name}</div>
+                    <div class="savings-amount">€${savings.toFixed(0)}</div>
+                    <div style="opacity: 0.9;">That's ${(savings / 12).toFixed(0)}€ per month!</div>
+                </div>
+                
+                <div class="cta-section">
+                    <p style="margin-bottom: 15px; color: #6b7280;">See full comparison with security, features, and more:</p>
+                    <a href="https://www.cryptoverso2025.com/comparisons/cheapest-crypto-exchange-fees/" class="cta-btn">
+                        View Full Comparison →
+                    </a>
+                </div>
+            `;
+            
+            document.getElementById('resultsContent').innerHTML = html;
+            document.getElementById('results').classList.add('show');
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Auto-calculate on page load with default values
+        window.addEventListener('load', () => {
+            calculateFees();
+        });
+    </script>
+</body>
+</html>
